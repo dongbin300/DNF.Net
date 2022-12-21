@@ -2,7 +2,8 @@
 [![NuGet latest version](https://badgen.net/nuget/v/DNF.Net/latest)](https://nuget.org/packages/DNF.Net)
 [![Github All Releases](https://img.shields.io/github/downloads/dongbin300/DNF.Net/total.svg)]()
 <br/><br/>
-C# Neople D&amp;F Online Open API wrapper as based on [던전앤파이터](https://developers.neople.co.kr/contents/apiDocs/df)
+C# 던전앤파이터 온라인 Open API wrapper 입니다.<br/>
+C# Neople D&amp;F Online Open API wrapper based on [던전앤파이터](https://developers.neople.co.kr/contents/apiDocs/df)
 
 ## Documentation
 [Documentation]()
