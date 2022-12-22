@@ -16,5 +16,8 @@ C# Neople D&amp;F Online Open API wrapper based on [던전앤파이터](https://
 [Donate](https://www.buymeacoffee.com/psS4YtQ)
 
 ## Release Notes
+- Version 1.0.5 - _2022-12-22_
+  - Add NuGet Info
+  
 - Version 1.0.0 - _2022-12-21_
   - Initial Commit
