@@ -1,9 +1,29 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+
+		<PackageId>DNF.Net</PackageId>
+		<Version>1.0.5</Version>
+		<Authors>Gaten</Authors>
+		<Company>Erin Wave</Company>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RepositoryUrl>https://github.com/dongbin300/DNF.Net</RepositoryUrl>
+		<Description>
+			C# Neople D&amp;F Online Open API wrapper
+		</Description>
+		<ApplicationIcon>dnf.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="dnf.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="dnf.ico" />
+	  <Content Include="dnf.png" />
+	</ItemGroup>
 
 </Project>
