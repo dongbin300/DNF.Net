@@ -38,7 +38,7 @@ rows	Count = 8
 [Donate](https://www.buymeacoffee.com/psS4YtQ)
 
 ## Release Notes
-- Version 1.1.6 - _2022-12-26_
+- Version 1.1.7 - _2022-12-26_
   - Add Korean Class
   
 - Version 1.0.5 - _2022-12-22_
