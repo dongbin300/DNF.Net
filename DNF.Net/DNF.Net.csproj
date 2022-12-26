@@ -6,13 +6,14 @@
 		<Nullable>enable</Nullable>
 
 		<PackageId>DNF.Net</PackageId>
-		<Version>1.0.5</Version>
+		<Version>1.1.7</Version>
 		<Authors>Gaten</Authors>
 		<Company>Erin Wave</Company>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<RepositoryUrl>https://github.com/dongbin300/DNF.Net</RepositoryUrl>
 		<Description>
 			C# Neople D&amp;F Online Open API wrapper
+			던파(던전앤파이터) Open API wrapper
 		</Description>
 		<ApplicationIcon>dnf.ico</ApplicationIcon>
 	</PropertyGroup>
