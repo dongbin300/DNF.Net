@@ -7,18 +7,12 @@ using static DNF.Net.Objects.Models.DnfApplicationModels;
 
 namespace DNF.Net.Applications.Apis
 {
-    public class DnfApplicationAuctionApi
-    {
+    public class DnfApplicationAuctionApi(string apiKey)
+	{
         private readonly HttpClient client = new();
         private readonly string _baseUrl = "https://api.neople.co.kr/df/auction";
-        private string apiKey;
 
-        public DnfApplicationAuctionApi(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
-
-        public async Task<DnfApplicationRecords<DnfApplicationAuctionItemSearch>?> GetAuctionItemSearchAsync(string itemName = "", string itemId = "", WordType wordType = WordType.Match, bool wordShort = true, int? minLevel = null, int? maxLevel = null, DnfItemRarityEnum? rarity = null, DnfReinforceTypeEnum? reinforceTypeId = null, int? minReinforce = null, int? maxReinforce = null, int? minRefine = null, int? maxRefine = null, int? minAdventureFame = null, int? maxAdventureFame = null, DnfSort? unitPrice = null, DnfSort? reinforce = null, DnfSort? auctionNo = null, int limit = 10)
+		public async Task<DnfApplicationRecords<DnfApplicationAuctionItemSearch>?> GetAuctionItemSearchAsync(string itemName = "", string itemId = "", WordType wordType = WordType.Match, bool wordShort = true, int? minLevel = null, int? maxLevel = null, DnfItemRarityEnum? rarity = null, DnfReinforceTypeEnum? reinforceTypeId = null, int? minReinforce = null, int? maxReinforce = null, int? minRefine = null, int? maxRefine = null, int? minAdventureFame = null, int? maxAdventureFame = null, DnfSort? unitPrice = null, DnfSort? reinforce = null, DnfSort? auctionNo = null, int limit = 10)
         {
             var parameters = new Dictionary<string, string?>
             {

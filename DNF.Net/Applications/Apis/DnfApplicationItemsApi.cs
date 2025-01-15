@@ -7,18 +7,12 @@ using static DNF.Net.Objects.Models.DnfApplicationModels;
 
 namespace DNF.Net.Applications.Apis
 {
-    public class DnfApplicationItemsApi
-    {
+    public class DnfApplicationItemsApi(string apiKey)
+	{
         private readonly HttpClient client = new();
         private readonly string _baseUrl = "https://api.neople.co.kr/df/items";
-        private string apiKey;
 
-        public DnfApplicationItemsApi(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
-
-        public async Task<DnfApplicationRecords<DnfApplicationItemSearch>?> GetItemSearchAsync(string itemName = "", IList<string>? hashtags = null, WordType wordType = WordType.Match, int? minLevel = null, int? maxLevel = null, DnfItemRarityEnum? rarity = null, int limit = 10)
+		public async Task<DnfApplicationRecords<DnfApplicationItemSearch>?> GetItemSearchAsync(string itemName = "", IList<string>? hashtags = null, WordType wordType = WordType.Match, int? minLevel = null, int? maxLevel = null, DnfItemRarityEnum? rarity = null, int limit = 10)
         {
             var parameters = new Dictionary<string, string?>
             {

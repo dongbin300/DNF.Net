@@ -7,18 +7,12 @@ using static DNF.Net.Objects.Models.DnfApplicationModels;
 
 namespace DNF.Net.Applications.Apis
 {
-    public class DnfApplicationSetItemsApi
-    {
+    public class DnfApplicationSetItemsApi(string apiKey)
+	{
         private readonly HttpClient client = new();
         private readonly string _baseUrl = "https://api.neople.co.kr/df/setitems";
-        private string apiKey;
 
-        public DnfApplicationSetItemsApi(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
-
-        public async Task<DnfApplicationRecords<DnfApplicationSetItem>?> GetSetItemSearchAsync(string setItemName, WordType wordType = WordType.Match, int limit = 10)
+		public async Task<DnfApplicationRecords<DnfApplicationSetItem>?> GetSetItemSearchAsync(string setItemName, WordType wordType = WordType.Match, int limit = 10)
         {
             var parameters = new Dictionary<string, string?>
             {

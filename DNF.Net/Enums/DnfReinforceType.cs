@@ -1,16 +1,10 @@
 ﻿namespace DNF.Net.Enums
 {
-    public class DnfReinforceTypeEnum
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-
-        public DnfReinforceTypeEnum(string id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-    }
+    public class DnfReinforceTypeEnum(string id, string name)
+	{
+		public string Id { get; set; } = id;
+		public string Name { get; set; } = name;
+	}
 
     public class DnfReinforceType
     {

@@ -2,19 +2,12 @@
 
 namespace DNF.Net.Enums
 {
-    public class DnfItemRarityEnum
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public Color Color { get; set; }
-
-        public DnfItemRarityEnum(string id, string name, Color color)
-        {
-            Id = id;
-            Name = name;
-            Color = color;
-        }
-    }
+    public class DnfItemRarityEnum(string id, string name, Color color)
+	{
+		public string Id { get; set; } = id;
+		public string Name { get; set; } = name;
+		public Color Color { get; set; } = color;
+	}
 
     public class DnfItemRarity
     {

@@ -7,18 +7,12 @@ using static DNF.Net.Objects.Models.DnfApplicationModels;
 
 namespace DNF.Net.Applications.Apis
 {
-    public class DnfApplicationServersApi
-    {
+    public class DnfApplicationServersApi(string apiKey)
+	{
         private readonly HttpClient client = new();
         private readonly string _baseUrl = "https://api.neople.co.kr/df/servers";
-        private string apiKey;
 
-        public DnfApplicationServersApi(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
-
-        public async Task<DnfApplicationRecords<DnfApplicationServer>?> GetServerInfoAsync()
+		public async Task<DnfApplicationRecords<DnfApplicationServer>?> GetServerInfoAsync()
         {
             var url = GetDnfApplicationUrl(_baseUrl, apiKey);
             return await RequestAsync<DnfApplicationRecords<DnfApplicationServer>>(client, url).ConfigureAwait(false);

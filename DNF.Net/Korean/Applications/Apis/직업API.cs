@@ -6,29 +6,23 @@ using static DNF.Net.Objects.Models.DnfApplicationModels;
 
 namespace DNF.Net.Korean.Applications.Apis
 {
-    public class 직업API
-    {
-        private readonly HttpClient client = new();
-        private readonly string _baseUrl = "https://api.neople.co.kr/df/jobs";
-        private string apiKey;
+	public class 직업API(string apiKey)
+	{
+		private readonly HttpClient client = new();
+		private readonly string _baseUrl = "https://api.neople.co.kr/df/jobs";
 
-        public 직업API(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
+		public async Task<DnfApplicationRecords<DnfApplicationJobInfo>?> 직업_정보()
+		{
+			var url = GetDnfApplicationUrl(_baseUrl, apiKey);
 
-        public async Task<DnfApplicationRecords<DnfApplicationJobInfo>?> 직업_정보()
-        {
-            var url = GetDnfApplicationUrl(_baseUrl, apiKey);
-
-            try
-            {
-                return await RequestAsync<DnfApplicationRecords<DnfApplicationJobInfo>>(client, url).ConfigureAwait(false);
-            }
-            catch
-            {
-                throw;
-            }
-        }
-    }
+			try
+			{
+				return await RequestAsync<DnfApplicationRecords<DnfApplicationJobInfo>>(client, url).ConfigureAwait(false);
+			}
+			catch
+			{
+				throw;
+			}
+		}
+	}
 }

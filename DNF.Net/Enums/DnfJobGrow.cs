@@ -1,18 +1,11 @@
 ﻿namespace DNF.Net.Enums
 {
-    public class DnfJobGrowEnum
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public DnfJobEnum Job { get; set; }
-
-        public DnfJobGrowEnum(string id, string name, DnfJobEnum job)
-        {
-            Id = id;
-            Name = name;
-            Job = job;
-        }
-    }
+    public class DnfJobGrowEnum(string id, string name, DnfJobEnum job)
+	{
+		public string Id { get; set; } = id;
+		public string Name { get; set; } = name;
+		public DnfJobEnum Job { get; set; } = job;
+	}
 
     public class DnfJobGrow
     {

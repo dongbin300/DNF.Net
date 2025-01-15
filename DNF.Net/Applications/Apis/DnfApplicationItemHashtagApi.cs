@@ -5,18 +5,12 @@ using static DNF.Net.Applications.DnfApplication;
 
 namespace DNF.Net.Applications.Apis
 {
-    public class DnfApplicationItemHashtagApi
-    {
+    public class DnfApplicationItemHashtagApi(string apiKey)
+	{
         private readonly HttpClient client = new();
         private readonly string _baseUrl = "https://api.neople.co.kr/df/item-hashtag";
-        private string apiKey;
 
-        public DnfApplicationItemHashtagApi(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
-
-        public async Task<DnfApplicationRecords<string>?> GetItemHashtagAsync()
+		public async Task<DnfApplicationRecords<string>?> GetItemHashtagAsync()
         {
             var url = GetDnfApplicationUrl($"{_baseUrl}", apiKey);
 

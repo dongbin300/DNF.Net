@@ -6,18 +6,12 @@ using static DNF.Net.Objects.Models.DnfApplicationModels;
 
 namespace DNF.Net.Applications.Apis
 {
-    public class DnfApplicationMultiApi
-    {
+    public class DnfApplicationMultiApi(string apiKey)
+	{
         private readonly HttpClient client = new();
         private readonly string _baseUrl = "https://api.neople.co.kr/df/multi";
-        private string apiKey;
 
-        public DnfApplicationMultiApi(string apiKey)
-        {
-            this.apiKey = apiKey;
-        }
-
-        public async Task<DnfApplicationRecords<DnfApplicationItemDetail>?> GetMultiItemSearchAsync(IList<string> itemIds)
+		public async Task<DnfApplicationRecords<DnfApplicationItemDetail>?> GetMultiItemSearchAsync(IList<string> itemIds)
         {
             var parameters = new Dictionary<string, string?>
             {

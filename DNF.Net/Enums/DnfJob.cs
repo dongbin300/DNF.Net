@@ -1,16 +1,10 @@
 ﻿namespace DNF.Net.Enums
 {
-    public class DnfJobEnum
-    {
-        public string Id { get; set; }
-        public string Name { get; set; }
-
-        public DnfJobEnum(string id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-    }
+    public class DnfJobEnum(string id, string name)
+	{
+		public string Id { get; set; } = id;
+		public string Name { get; set; } = name;
+	}
 
     public class DnfJob
     {

@@ -48,19 +48,19 @@ namespace DNF.Net.Applications
 
                 var response = requestResult.EnsureSuccessStatusCode();
                 if (response.StatusCode == HttpStatusCode.OK)
-                {
-                    var result = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
-                    return result;
-                }
-                else
-                {
-                    return Array.Empty<byte>();
-                }
-            }
-            catch
-            {
-                return Array.Empty<byte>();
-            }
-        }
-    }
+				{
+					var result = await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false);
+					return result;
+				}
+				else
+				{
+					return [];
+				}
+			}
+			catch
+			{
+				return [];
+			}
+		}
+	}
 }
