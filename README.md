@@ -39,10 +39,11 @@ rows	Count = 8
 
 ## Release Notes
 - Version 1.1.7 - _2022-12-26_
-  - Add Korean Class
+  - Add Korean naming class
+  - Add examples
   
 - Version 1.0.5 - _2022-12-22_
-  - Add NuGet Info
+  - Add NuGet info
   
 - Version 1.0.0 - _2022-12-21_
-  - Initial Commit
+  - Initial commit
